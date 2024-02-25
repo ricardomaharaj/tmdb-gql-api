@@ -1,12 +1,10 @@
 import { Movie } from '~/types/tmdb'
-import {
-  filterCast,
-  filterCrew,
-  filterImages,
-  filterReleaseDates,
-  getPaginatePos,
-  tmdbFetch,
-} from '~/util'
+import { filterCast } from '~/util/filter-cast'
+import { filterCrew } from '~/util/filter-crew'
+import { filterImages } from '~/util/filter-images'
+import { filterReleaseDates } from '~/util/filter-release-dates'
+import { getPaginatePos } from '~/util/paginate-pos'
+import { tmdbFetch } from '~/util/tmdb-fetch'
 
 export async function movieResolver(
   _: unknown,

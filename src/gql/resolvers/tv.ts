@@ -1,11 +1,9 @@
 import { TV } from '~/types/tmdb'
-import {
-  filterAggregateCast,
-  filterAggregateCrew,
-  filterImages,
-  getPaginatePos,
-  tmdbFetch,
-} from '~/util'
+import { filterAggregateCast } from '~/util/filter-aggregate-cast'
+import { filterAggregateCrew } from '~/util/filter-aggregate-crew'
+import { filterImages } from '~/util/filter-images'
+import { getPaginatePos } from '~/util/paginate-pos'
+import { tmdbFetch } from '~/util/tmdb-fetch'
 
 export async function tvResolver(
   _: unknown,

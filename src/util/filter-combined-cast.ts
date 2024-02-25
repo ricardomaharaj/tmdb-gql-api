@@ -15,6 +15,15 @@ export function filterCombinedCast(args: {
     return false
   })
 
+  let tmpCast: CombinedCast[] = []
+  cast?.forEach((x) => {
+    const i = tmpCast.findIndex((y) => y.id === x.id)
+    if (i !== -1) tmpCast[i].character += ` | ${x.character}`
+    else tmpCast.push(x)
+  })
+
+  cast = tmpCast
+
   cast = cast?.filter((x) => {
     if (!q) return true
     if (x.name?.toLowerCase().includes(q)) return true

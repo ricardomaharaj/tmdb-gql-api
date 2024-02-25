@@ -1,4 +1,4 @@
-import { tmdbFetch } from '~/util'
+import { tmdbFetch } from '~/util/tmdb-fetch'
 
 export async function searchResolver(
   _: unknown,

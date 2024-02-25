@@ -1,11 +1,9 @@
 import { TVSeason } from '~/types/tmdb'
-import {
-  filterCast,
-  filterCrew,
-  filterImages,
-  getPaginatePos,
-  tmdbFetch,
-} from '~/util'
+import { filterCast } from '~/util/filter-cast'
+import { filterCrew } from '~/util/filter-crew'
+import { filterImages } from '~/util/filter-images'
+import { getPaginatePos } from '~/util/paginate-pos'
+import { tmdbFetch } from '~/util/tmdb-fetch'
 
 export async function tvSeasonResolver(
   _: unknown,

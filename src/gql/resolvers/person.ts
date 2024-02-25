@@ -1,10 +1,8 @@
 import { Person } from '~/types/tmdb'
-import {
-  filterCombinedCast,
-  filterCombinedCrew,
-  filterImages,
-  tmdbFetch,
-} from '~/util'
+import { filterCombinedCast } from '~/util/filter-combined-cast'
+import { filterCombinedCrew } from '~/util/filter-combined-crew'
+import { filterImages } from '~/util/filter-images'
+import { tmdbFetch } from '~/util/tmdb-fetch'
 
 export async function personResolver(
   _: unknown,

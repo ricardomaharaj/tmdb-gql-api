@@ -9,5 +9,6 @@ export function filterImages(args: { images?: Image[]; page?: number }) {
   })
 
   const { start, end } = getPaginatePos(args.page ?? 1)
+
   return images?.slice(start, end)
 }
