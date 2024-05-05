@@ -4,7 +4,7 @@
   "module": "src/server.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch ./src/server.ts"
+    "dev": "bun run --watch src/server.ts"
   },
   "dependencies": {
     "@graphql-yoga/plugin-response-cache": "latest",
