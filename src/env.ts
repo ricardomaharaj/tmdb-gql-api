@@ -1,12 +1,5 @@
-import { z } from 'zod'
-
-export const env = z
-  .object({
-    API_BASE_URL: z.string().default('https://api.themoviedb.org/3'),
-    TMDB_API_KEY: z.string(),
-    PORT: z
-      .string()
-      .default('4000')
-      .transform((x) => parseInt(x)),
-  })
-  .parse(process.env)
+export const env = {
+  API_BASE_URL: process.env.API_BASE_URL || 'https://api.themoviedb.org/3',
+  TMDB_API_KEY: process.env.TMDB_API_KEY!,
+  PORT: Number(process.env.PORT || '4000'),
+}
